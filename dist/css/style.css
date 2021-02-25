@@ -885,6 +885,7 @@ th {
   background-repeat: no-repeat;
   padding-top: 100px;
   padding-bottom: 70px;
+  background-attachment: fixed;
 }
 
 .audit-forms {
@@ -1000,7 +1001,71 @@ th {
   color: white;
 }
 
+.author {
+  background-image: url("../img/backs-5.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 120px 0 0 0;
+}
+
+.author-title {
+  font-size: 40px;
+  color: #8d44af;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+.author-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.author-wrapper-item:first-child {
+  padding-top: 50px;
+  max-width: 700px;
+}
+
+.author-wrapper-item:last-child {
+  max-width: 100%;
+  object-fit: cover;
+  width: 400px;
+}
+
+.author-wrapper-item-title {
+  font-size: 40px;
+  color: #8d44af;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+.author-wrapper-item-desc {
+  font-size: 16px;
+  color: #8d44af;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+.author-wrapper-item-subtitle {
+  padding: 10px;
+  font-size: 30px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  background-color: #8d44af;
+  max-width: 700px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
 @media screen and (max-width: 1150px) {
+  .author-wrapper {
+    justify-content: center;
+  }
+
   .u-video-1 {
     display: none;
   }
@@ -1162,7 +1227,45 @@ th {
   }
 }
 
+@media screen and (max-width: 676px) {
+  .author {
+    background-position-x: -150px;
+  }
+
+  .author-wrapper {
+    justify-content: center;
+  }
+
+  .author-wrapper-item:last-child {
+    width: 300px;
+  }
+
+  .author-wrapper-item-title {
+    font-size: 35px;
+  }
+
+  .author-wrapper-item-subtitle {
+    font-size: 24px;
+  }
+}
+
 @media screen and (max-width: 551px) {
+  .author-wrapper-item:last-child {
+    width: 250px;
+  }
+
+  .author-wrapper-item-title {
+    font-size: 30px;
+  }
+
+  .author-wrapper-item-desc {
+    font-size: 14px;
+  }
+
+  .author-wrapper-item-subtitle {
+    font-size: 19px;
+  }
+
   .audit-wrapper-item {
     width: calc(100%/12*12);
   }
@@ -1242,6 +1345,18 @@ th {
 }
 
 @media screen and (max-width: 468px) {
+  .author-wrapper-item:last-child {
+    width: 200px;
+  }
+
+  .author-wrapper-item-title {
+    font-size: 25px;
+  }
+
+  .author-wrapper-item-subtitle {
+    font-size: 16px;
+  }
+
   .program-wrapper-item-subtitle::before {
     height: 3px;
     width: 40px;
@@ -1296,6 +1411,20 @@ th {
 
   th {
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .author-wrapper-item:last-child {
+    width: 200px;
+  }
+
+  .author-wrapper-item-title {
+    font-size: 25px;
+  }
+
+  .author-wrapper-item-subtitle {
+    font-size: 15px;
   }
 }
 
