@@ -1,0 +1,62 @@
+.skills  {
+    background-image: url('../img/backs-2.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    &-list {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        padding: 0;
+        padding-top: 20px;
+        &-item {
+            margin-top: 20px;
+            position: relative;
+            font-size: 25px;
+            color: $mainColor;
+            padding-left: 30px;
+            padding-top: 5px;
+            &::before {
+                content: '●';
+                position: absolute;
+                left: 0;
+                font-size: 30px;
+                top: 0;
+            }
+        }
+    }
+    &-title--mod {
+        padding: 1px 5px 1px 5px;
+        background-color: $mainColor;
+        color: $secondColor;
+        border-radius: 20px;
+        position: relative;
+        &::after {
+            content: '?';
+            font-family: $mainFont;
+            color: $mainColor;
+            font-size: 120px;
+            right: -75px;
+            position: absolute;
+            top: -25px;
+        }
+    }
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        &-item {
+            font-family: $mainFont;
+            &-title {
+                font-family: #181818;
+                font-size: 40px;
+                font-weight: 700;
+            }
+            &:last-child {
+                    object-fit: cover;
+                    max-width: 300px;
+            }
+        }
+    }
+}

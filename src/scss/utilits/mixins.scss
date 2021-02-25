@@ -1,0 +1,13 @@
+@mixin links {
+    color: white;
+    font-size: 18px;
+    font-family: $mainFont;
+    font-weight: 400;
+    text-decoration: none;
+    transition: .4s linear all;
+}
+@mixin  linksAfter {
+    color: white;
+}
+
+

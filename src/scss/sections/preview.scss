@@ -1,0 +1,74 @@
+.u-video-2 {
+    display: none;
+}
+
+.preview {
+    background-image: url('../img/backs-1.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 250px 0;
+    z-index: 1;
+    &-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &-item {
+            & iframe {
+                max-width: 100%;
+            }
+        }
+    }
+    &-info {
+        z-index: 30;
+        max-width: 550px;
+        font-family: $mainFont;
+        text-align: left;
+        &-title {
+            font-size: 40px;
+            color: $secondColor;
+            font-weight: 700;
+            padding-bottom: 20px;
+            & strong {
+                color: $secondColor;
+                font-weight: 700;
+            }
+        }
+        &-description {
+            border-radius: 20px;
+            line-height: 40px;
+            font-size: 20px;
+            color: $secondColor;
+            padding: 5px;
+            background-color: $mainColor;
+            margin-right: 10px;
+
+        }
+    }
+    &-btn {
+        margin-right: auto;
+        margin-top: 60px;
+        &-callback {
+            font-family: $mainFont;
+            padding: 15px 40px;
+            background-color: #27ae61;
+            text-decoration: none;
+            color: $secondColor;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 20px;
+            transition: .3s linear;
+            &:hover {
+                box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+                background-color: #209251;
+            }
+        }
+    
+    }
+}
+
+.he {
+    height: 100vh;
+    background-color: wheat;
+}

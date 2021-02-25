@@ -1,0 +1,135 @@
+.u-video-2 {
+    display: none;
+}
+
+.top-bar {
+    background-color: $mainColor;
+    font-family: $mainFont;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    &-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        &-item {
+            
+            &-title {
+                text-decoration: none;
+                font-size: 35px;
+                color: $secondColor;
+                transition: .3s linear;
+                & strong {
+                    transition: .3s linear;
+                }
+            }
+        }
+    }
+    &-soc {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &-link {
+            width: 40px;
+            height: 40px;
+            margin-right: 20px;
+            & svg path {
+                fill: white;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    transition: transform .4s ease-in;
+    &-line {
+        display: none;
+        transition: .4s linear;
+    }
+    &-item {
+        margin-right: 20px;
+        position: relative;
+        &:last-child {
+            margin-right: 0;
+        }
+        &-link {
+            @include links;
+            padding-bottom: 36px;
+            position: relative;
+            &::before {
+                content: "";
+                width: 0;
+                height: 0.1em;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                background: white;
+                transition: all 0.3s;
+            }
+            &:hover {
+                @include linksAfter;
+                &::before {
+                    width: 100%;
+                    left: 0;
+                    background: white;
+                }
+            }
+        }
+  
+    }
+}
+
+.preview-wrapper {
+    & iframe {
+        border-radius: 20px;
+    }
+}
+
+// navigation
+
+.top-bar-burger {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    &-item {
+        background-color: white;
+        height: 2px;
+        transition: .4s linear all;
+        &:first-child {
+            width: 45px;
+        }
+        &:nth-child(2) {
+            width: 35px;
+            margin-top: 5px;
+        }
+        &:last-child {
+            width: 25px;
+            margin-top: 5px;
+        }
+    }
+}
+
+// then menu open
+
+.menu-open {
+    .top-bar-burger-item:first-child {
+        width: 25px;
+    }
+    .top-bar-burger-item:nth-child(2) {
+        width: 35px;
+    }
+    .top-bar-burger-item:last-child {
+        width: 45px;
+    }
+}
