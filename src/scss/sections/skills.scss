@@ -2,7 +2,7 @@
     background-image: url('../img/backs-2.webp');
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 100px 0;
+    padding: 100px 0 0 0;
     &-list {
         display: flex;
         flex-direction: column;
@@ -46,6 +46,7 @@
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
+        padding-bottom: 70px;
         &-item {
             font-family: $mainFont;
             &-title {
