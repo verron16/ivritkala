@@ -1190,6 +1190,7 @@ th {
   color: #8d44af;
   font-weight: 700;
   border-radius: 20px;
+  text-decoration: none;
 }
 
 .tarif-wrapper-item-btn-content {
