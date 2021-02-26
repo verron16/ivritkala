@@ -221,6 +221,11 @@
 }
 
 @media screen and (max-width: 551px) {
+    .down-bar {
+        &-title {
+            font-size: 18px;
+        }
+    }
     .footer {
         &-title {
             font-size: 30px;
@@ -251,6 +256,11 @@
     }
 }
 .tarif {
+    &-list {
+        &-item {
+            font-size: 15px;
+        }
+    }
     &-title {
         font-size: 30px;
     }
@@ -414,6 +424,13 @@
 }
 
 @media screen and (max-width: 420px) {
+    .tarif {
+        &-wrapper {
+            &-item {
+                min-height: 650px;
+            }
+        }
+    }
     .audit {
         &-forms {
             &-form {
@@ -464,13 +481,7 @@
 }
 
 @media screen and (max-width: 390px) {
-    .tarif {
-        &-wrapper {
-            &-item {
-                min-height: 550px;
-            }
-        }
-    }
+
     .author {
         &-wrapper {
             &-item {

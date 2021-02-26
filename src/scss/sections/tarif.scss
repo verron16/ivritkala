@@ -36,7 +36,9 @@
             font-weight: 500;
             color: $mainColor;
             padding-top: 10px;
-
+            & span {
+                font-weight: 700;
+            }
             &::before {
                 content: '●';
                 position: absolute;
@@ -45,6 +47,7 @@
                 top: 5px;
                 color: $mainColor;
             }
+
         }
     }
 
@@ -68,7 +71,7 @@
             width: 350px;
             margin-right: 15px;
             font-family: $mainFont;
-            min-height: 500px;
+            min-height: 650px;
             position: relative;
             transition: .3s linear;
 
@@ -134,5 +137,3 @@
         }
     }
 }
-
-

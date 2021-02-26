@@ -53,7 +53,7 @@ main
         .container 
             .audit-title
                 h2.audit-title-item Для кого
-                p.audit-title-item создан наш курс
+                p.audit-title-item создан мой курс
             .audit-wrapper 
                 .audit-wrapper-item
                     .audit-wrapper-item-up
@@ -158,7 +158,7 @@ main
                                 transform="translate(-13.8 -102.83)")
                         h2.audit-wrapper-item-up-title Репатриант
                     .audit-wrapper-item-down
-                        p.audit-wrapper-item-down-desc Для тех, кто репатриировался в Израиль, и хочет быстро и непринужденно интегрироваться в местную жизнь
+                        p.audit-wrapper-item-down-desc Для тех, кто репатриировался в Израиль и хочет быстро и непринужденно интегрироваться в местную жизнь
                 .audit-wrapper-item
                     .audit-wrapper-item-up
                         svg(id="Layer_3" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 729.14 1063.18")
@@ -261,26 +261,26 @@ main
 
                     .audit-wrapper-item-down
                         p.audit-wrapper-item-down-desc Для тех, кто чувствует себя неуверенно в разговоре и считает, что ему недостаточно практики
-            .audit-forms
-                input(type="text" placeholder="Ваше имя и фамилия").audit-forms-form
-                input(type="text" placeholder="Ваш номер телефона").audit-forms-form#phone-form
-                input(type="text" placeholder="Ваш email адрес").audit-forms-form
+            form.audit-forms(action="send.php")
+                input(type="text" placeholder="Ваше имя и фамилия").audit-forms-form(name="name", required)
+                input(type="text" placeholder="Ваш номер телефона").audit-forms-form#phone-form(name="phone", required)
+                input(type="email" placeholder="Ваш email адрес").audit-forms-form(name="email", required)
                 button.audit-forms-btn Записаться
-    section.author 
+    section.author#author 
         .container 
             h1.author-title Обо мне
             .author-wrapper 
                 .author-wrapper-item
-                    h1.author-wrapper-item-title Я - Алексей Ташаев
-                    p.author-wrapper-item-desc Я приехал в Израиль #[span по программе Наале в 2001 году, не зная ни одного слова на иврите] и буквально #[span влюбился] в этот интереснейший язык. Уже через полгода я свободно разговаривал на иврите, а через год уже изучал театральное искусство, как предмет в школе, наряду с коренными израильтянами.
+                    h1.author-wrapper-item-title Меня зовут Алексей Ташаев
+                    p.author-wrapper-item-desc Я приехал в Израиль #[span по программе Наале в 2001 году, не зная ни одного слова на иврите] и буквально #[span влюбился] в этот интереснейший язык. Уже через полгода я свободно разговаривал на иврите, а через год уже изучал театральное искусство, как предмет в школе, вместе с коренными израильтянами.
                     h3.author-wrapper-item-subtitle 2004-2007 - Армия Обороны Израиля 
                     p.author-wrapper-item-desc Знание иврита очень помогло мне добиться звания #[span командира] в Армии Обороны Израиля в войсках особого назначения. Ведь, помимо физической подготовки и специальных знаний, для исполнения этой должности требовалось совершенное знание языка.
                     h3.author-wrapper-item-subtitle 2008-сегодня - Режиссер, Актер
-                    p.author-wrapper-item-desc Будучи #[span единственным русскоязычным] израильтянином в театральном училище "Семинар-а-Кибуцим" в Тель-Авиве, я окончил его с отличием, получив премию #[span "Актёр года".] Там же начал писать стихи и песни на иврите. На сегодня за моим авторством более 700 стихотворений и 200 песен.
+                    p.author-wrapper-item-desc Будучи #[span единственным русскоязычным] израильтянином в театральном училище "Семинар-а-Кибуцим" в Тель-Авиве, я окончил его с отличием, получив премию #[span "Актёр года".] Там же начал писать стихи и песни на иврите. На сегодня я являюсь более 700 стихотворений и 200 песен.
                     h3.author-wrapper-item-subtitle 2016-сегодня - Преподаватель
-                    p.author-wrapper-item-desc В 2017 году мне поступило предложение от #[span Министерства абсорбции] подготовить #[span спектакль об иврите] для новых репатриантов. Был создан обучающий спектакль, благодаря которому репатрианты, #[span не знавшие и пары слов, заговорили в течении часа.] После этого мне начали поступать предложения обучать людей, и на сегодняшний день у меня ежемесячно #[span занимаются больше 100 человек.]
+                    p.author-wrapper-item-desc В 2016 году мне поступило предложение от #[span Министерства абсорбции] подготовить #[span спектакль об иврите] для новых репатриантов. Был создан обучающий спектакль, благодаря которому репатрианты, #[span не знавшие и пары слов, заговорили в течении часа.] После этого мне начали поступать предложения обучать людей, и на сегодняшний день у меня постоянно #[span занимаются больше 100 человек.]
                 img(src="img/author.webp", alt="author").author-wrapper-item.wow.rotateInUpRight
-    section.tarif 
+    section.tarif#tarif
         .container 
             h1.tarif-title Стоимость
             .tarif-wrapper
@@ -288,47 +288,60 @@ main
                     h2.tarif-wrapper-item-title Стандартный
                     ul.tarif-list
                         li.tarif-list-item 90 видеуроков
-                        li.tarif-list-item 10 уроков 1 на 1 с частным#[br]преподавателем
-                        li.tarif-list-item Обратная связь на месяц
+                        li.tarif-list-item 10 уроков 1 на 1 с#[br]личным преподавателем
+                        li.tarif-list-item Обратная связь в течение месяца
                         li.tarif-list-item Конспекты всех уроков с#[br]преподавателем
                         li.tarif-list-item Домашние задания
-                        li.tarif-list-item Текст в конце курса
+                        li.tarif-list-item Тест в конце курса
                         li.tarif-list-item Аттестат об окончании курса
                     .tarif-wrapper-item-price
                         h2.tarif-wrapper-item-price-content 1379₪ (395$)
-                    button.tarif-wrapper-item-btn Подробнее
+                    button.tarif-wrapper-item-btn Выбрать
                 .tarif-wrapper-item
                     h2.tarif-wrapper-item-title VIP
                     ul.tarif-list
-                        li.tarif-list-item 18 уроков 1 на 1 с частным#[br]преподавателем
-                        li.tarif-list-item Обратная связь на 2.5 месяца
+                        li.tarif-list-item 90 видеуроков
+                        li.tarif-list-item 18 уроков 1 на 1 с#[br]личным преподавателем
+                        li.tarif-list-item Обратная связь в течение 2.5 месяцов
+                        li.tarif-list-item Конспекты всех уроков с преподавателем
+                        li.tarif-list-item Домашние задания
+                        li.tarif-list-item Тест в конце курса
+                        li.tarif-list-item Аттестат об окончании курса
                         li.tarif-list-item 3 консультации с основателем#[br]школы 1 на 1
                         li.tarif-list-item 2 песни-хита, переведенные#[br]Алексеем лично для вас
-                        li.tarif-list-item Конспекты уроков, домашние задания, тест и аттестат
                     .tarif-wrapper-item-price
                         h2.tarif-wrapper-item-price-content 1779₪ (548$)
-                    button.tarif-wrapper-item-btn Подробнее
+                    button.tarif-wrapper-item-btn Выбрать
                 .tarif-wrapper-item
                     h2.tarif-wrapper-item-title Премиум
                     ul.tarif-list
-                        li.tarif-list-item 24 уроков 1 на 1 с частным#[br]преподавателем
-                        li.tarif-list-item Обратная связь на 3.5 месяца
-                        li.tarif-list-item 5 консультации с основателем#[br]школы 1 на 1
-                        li.tarif-list-item 4 песни-хита, переведенные#[br]Алексеем лично для вас
-                        li.tarif-list-item Конспекты уроков, домашние задания, тест и аттестат
+                        li.tarif-list-item 90 видеуроков
+                        li.tarif-list-item 24 урока 1 на 1 с#[br]личным преподавателем
+                        li.tarif-list-item Обратная связь в течение 3.5 месяцов
+                        li.tarif-list-item Конспекты всех уроков с преподавателем
+                        li.tarif-list-item Домашние задания
+                        li.tarif-list-item Тест в конце курса
+                        li.tarif-list-item Аттестат об окончании курса
+                        li.tarif-list-item 5 консультаций с основателем#[br]школы 1 на 1
+                        li.tarif-list-item 4 песни-хита + 1 стихотворение, переведенные#[br]Алексеем лично для вас
                     .tarif-wrapper-item-price
                         h2.tarif-wrapper-item-price-content 1979₪ (610$)
-                    button.tarif-wrapper-item-btn Подробнее
+                    button.tarif-wrapper-item-btn Выбрать
                 .tarif-wrapper-item
                     h2.tarif-wrapper-item-title Премиум VIP
                     ul.tarif-list
-                        li.tarif-list-item 24 уроков 1 на 1 с частным#[br]преподавателем
-                        li.tarif-list-item Обратная связь на 4.5 месяца
+                        li.tarif-list-item 90 видеуроков
+                        li.tarif-list-item 24 урока 1 на 1 с#[br]#[span основателем школы]
+                        li.tarif-list-item Обратная связь в течение 4.5 месяцов
+                        li.tarif-list-item Конспекты всех уроков с преподавателем
+                        li.tarif-list-item Домашние задания
+                        li.tarif-list-item Тест в конце курса
+                        li.tarif-list-item Аттестат об окончании курса
+                        li.tarif-list-item #[span Неограниченно], вся обратная связь идёт от основателя школы
                         li.tarif-list-item 6 песен-хитов +3 стихотворения,#[br]переведенные Алексеем лично для вас
-                        li.tarif-list-item Конспекты уроков, домашние задания, тест и аттестат
                     .tarif-wrapper-item-price
                         h2.tarif-wrapper-item-price-content 3979₪ (1227$)
-                    button.tarif-wrapper-item-btn Подробнее
+                    button.tarif-wrapper-item-btn Выбрать
             .tarif-btn 
                 a(href="#footer").tarif-btn-item Получить бесплатное занятие и 3 видеоурока
     section.reviews 
@@ -338,15 +351,19 @@ main
                     .swiper-container 
                         .swiper-wrapper
                             .swiper-slide
-                                <iframe width="405" height="540" src="https://www.youtube.com/embed/videoseries?list=PL_WqvE7Ufie0uZy3rPA2dYaSaksD7XxU8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                <iframe width="405" height="540" src="https://www.youtube.com/embed/0gdowFJuiFA?showinfo=0&amp;rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                            .swiper-slide
+                                <iframe width="405" height="540" src="https://www.youtube.com/embed/OSirQAKxtAs?showinfo=0&amp;rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                            .swiper-slide
+                                <iframe width="405" height="540" src="https://www.youtube.com/embed/i8xKtQQ6wik?showinfo=0&amp;rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
                             .swiper-slide
                                 <iframe width="405" height="540" src="https://www.youtube.com/embed/wpcdFjrEZqM?showinfo=0&amp;rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
                             .swiper-slide
-                                <iframe width="405" height="540" src="https://www.youtube.com/embed/vvq2gRi6gV0?showinfo=0&amp;rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-                            .swiper-slide
                                 <iframe width="405" height="540" src="https://www.youtube.com/embed/3nS70IF4SS0?showinfo=0&amp;rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-                        .swiper-button-prev.swiper-arrows
-    
-                                   
+                            .swiper-slide
+                                <iframe width="405" height="540" src="https://www.youtube.com/embed/q9Jp8ezp4YY?showinfo=0&amp;rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                        .swiper-button-prev.swiper-arrows    
                         .swiper-button-next.swiper-arrows
+                    .reviews-btn 
+                        a(href="https://www.instagram.com/stories/highlights/17863378670158266/").reviews-btn-item Больше отзывов 
 

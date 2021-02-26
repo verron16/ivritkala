@@ -3,10 +3,10 @@ footer
         .container
             h1.footer-title Запишитесь на#[br]бесплатную консультацию
             .footer-wrapper 
-                .footer-wrapper-item.footer-forms 
-                    input(type="text" placeholder="Как вас зовут?").footer-forms-form
-                    input(type="text" placeholder="Номер телефона").footer-forms-form
-                    input(type="text" placeholder="Ваша почта").footer-forms-form
+                form.footer-wrapper-item.footer-forms(action="send.php")
+                    input(type="text" placeholder="Как вас зовут?").footer-forms-form(name="name", required)
+                    input(type="text" placeholder="Номер телефона").footer-forms-form(name="phone", required)
+                    input(type="email" placeholder="Ваша почта").footer-forms-form(name="email", required)
                     button.footer-forms-btn Перезвоните мне!
                 .footer-wrapper-item
                    h2.footer-wrapper-item-title 1. Отправьте заявку

@@ -8,6 +8,24 @@ menuBurger.classList.toggle('menu-open');
 menu.classList.toggle('menu-sm')
 }
 
+function closeMenu() {
+  menuBurger.classList.remove('menu-open');
+  menu.classList.remove('menu-sm');
+}
+
+let links = document.querySelectorAll('.menu-item-link').forEach(a => a.addEventListener('click', ev => {
+  let id = ev.target.getAttribute('href').slice(1)
+  switch (id) {
+    case 'footer': closeMenu(); break;
+    case 'author': closeMenu(); break;
+    case 'tarif': closeMenu(); break;
+    default: return;
+  }
+
+}))
+
+
+
 wow = new WOW(
     {
     boxClass:     'wow',      // default
