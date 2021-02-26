@@ -3,6 +3,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 200px 0;
+    &-item {
+        &-info {
+            font-size: 20px;
+            padding-top: 10px;
+            letter-spacing: 0.3px;
+        }
+    }
     &-list {
         padding: 0;
         padding-top: 20px;
@@ -18,16 +25,15 @@
                 font-size: 30px;
                 top: 0;
             }
-            font-size: 20px;
-            &:first-child {
-                margin: 0;
-                padding: 0;
-                font-size: 25px;
-                font-weight: 700;
-                &::before {
-                    content: '';
-                }
-            }
+            // &:first-child {
+            //     margin: 0;
+            //     padding: 0;
+            //     font-size: 25px;
+            //     font-weight: 700;
+            //     &::before {
+            //         content: '';
+            //     }
+            // }
         }
     }
     &-title {
@@ -59,6 +65,12 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
+        &-video {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
         & iframe {
             max-width: 100%;
             border-radius: 20px;
@@ -107,4 +119,9 @@ th {
     font-size: 18px;
     border: 3px solid $secondColor;
     padding: 5px;
+}
+
+.program-wrapper-video .preview-btn {
+    margin-bottom: 40px;
+    margin-right: 0;
 }

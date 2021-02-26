@@ -38,6 +38,9 @@
                 font-family: $mainFont;
                 font-weight: 600;
                 padding-bottom: 20px;
+                & span {
+                    font-weight: 800;
+                }
             }
             &-subtitle {
                 padding: 10px;

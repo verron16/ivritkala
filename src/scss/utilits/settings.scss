@@ -19,3 +19,7 @@ p,span {
     padding: $containerPadding;
     margin: 0 auto;
 }
+
+html {
+    scroll-behavior: smooth;
+  }

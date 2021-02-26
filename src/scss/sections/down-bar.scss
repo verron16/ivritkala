@@ -1,0 +1,9 @@
+.down-bar {
+    padding: 20px 0;
+    &-title {
+        font-size: 25px;
+        color: $mainColor;
+        text-align: center;
+        font-family: $mainFont;
+    }
+}

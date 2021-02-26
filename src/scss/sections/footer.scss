@@ -1,0 +1,80 @@
+.footer {
+    background-image: url(../img/backs-8.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    &-forms {
+        &-form {
+            outline: none;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            max-width: 300px;
+            width: 300px;
+            margin-top: 20px;
+            &::placeholder {
+                font-family: $mainFont;
+            }
+        }
+        &-btn {
+            background-color: #27ae61;
+            font-weight: 700;
+            border-radius: 20px;
+            font-family: $mainFont;
+            color: $secondColor;
+            outline: none;
+            cursor: pointer;
+            transition: .3s linear;
+            border: none;
+            padding: 10px 25px;
+            margin-top: 30px;
+            width: 250px;
+            &:hover {
+                box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+                background-color: #209251;
+            }
+        }
+    }
+    &-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 50px;
+        flex-wrap: wrap;
+        &-item {
+            font-family: $mainFont;
+            &:first-child {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            &:last-child {
+                border-radius: 20px;
+                border: 5px solid $secondColor;
+                padding: 50px 50px;
+            }
+            &-title {
+                font-size: 35px;
+                color: $secondColor;
+                font-weight: 700;
+                &:last-child {
+                    padding-top: 30px;
+                }
+                &:nth-child(3) {
+                    padding-top: 30px;
+                }
+            }
+            &-desc {
+                font-size: 25px;
+                color: $secondColor;
+                font-weight: 400;
+            }
+        }
+    }
+    &-title {
+        font-size: 40px;
+        color: $secondColor;
+        font-family: $mainFont;
+        text-align: center;
+    }
+}
