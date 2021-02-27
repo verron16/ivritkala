@@ -1760,7 +1760,7 @@ th {
   .modal {
     overflow-y: auto;
     overflow-x: hidden;
-    height: 90vh;
+    height: 52vh;
   }
 
   .modal-content-forms-item {
