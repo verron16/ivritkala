@@ -1550,6 +1550,15 @@ th {
   display: flex;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 5px 5px 10px 10px rgba(0, 0, 0, 0.424);
+  border: solid 3px transparent;
+}
+
 @media screen and (max-width: 1150px) {
   .tarif-list-item {
     padding-top: 15px;
@@ -1748,6 +1757,24 @@ th {
 }
 
 @media screen and (max-width: 676px) {
+  .modal {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 90vh;
+  }
+
+  .modal-content-forms-item {
+    padding: 5px 10px;
+  }
+
+  .modal-content-tarif-list-item {
+    padding-top: 5px;
+  }
+
+  .modal-content-tarif-list-item::before {
+    top: 1px;
+  }
+
   .modal-content-up {
     flex-wrap: wrap;
   }

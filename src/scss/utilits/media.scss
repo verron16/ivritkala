@@ -185,7 +185,25 @@
 
 @media screen and (max-width: 676px) {
     .modal {
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 90vh;
         &-content {
+            &-forms {
+                &-item {
+                    padding: 5px 10px;
+                }
+            }
+            &-tarif {
+                &-list {
+                    &-item {
+                        padding-top: 5px;
+                        &::before {
+                            top: 1px;
+                        }
+                    }
+                }
+            }
             &-up {
                 flex-wrap: wrap;
             }
