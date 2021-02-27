@@ -19,12 +19,12 @@ let links = document.querySelectorAll('.menu-item-link').forEach(a => a.addEvent
     case 'footer': closeMenu(); break;
     case 'author': closeMenu(); break;
     case 'tarif': closeMenu(); break;
+    case 'reviews': closeMenu(); break;
     default: return;
   }
-
 }))
 
-
+// settings animations
 
 wow = new WOW(
     {

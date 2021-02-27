@@ -1,0 +1,173 @@
+.modal {
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: $secondColor;
+    border-radius: 20px;
+    position: relative;
+    padding: 50px 0;
+    &-close-icon {
+        width: 30px;
+        height: 30px;
+        fill: $mainColor;
+        cursor: pointer;
+        position: absolute;
+        right: 40px;
+        top: 30px;
+        transition: .3s linear;
+        &:hover {
+            transform: rotate(90deg);
+        }
+    }
+    &-wrapper {
+        z-index: 1000;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        align-items: center;
+        justify-self: start;
+        color: #181818;
+        display: none;
+        opacity: 0;
+        transition: .3s;
+    }
+    &-content {
+        &-up {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding-top: 40px;
+        }
+        &-forms {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+            margin-right: 30px;
+           &-btn {
+               outline: none;
+               cursor: pointer;
+               padding: 10px 20px;
+               background-color: #27ae61;
+               font-weight: 700;
+               border-radius: 20px;
+               font-family: $mainFont;
+               color: white;
+               outline: none;
+               cursor: pointer;
+               transition: .3s linear;
+               border: none;
+               padding: 10px 25px;
+               margin-top: 30px;
+               width: 250px;
+               &:hover {
+                box-shadow: 2px 2px 8px 0px black;
+                background-color: #209251;
+               }
+           }
+            &-item {
+                margin-top: 10px;
+                outline: none;
+                border: 1px solid $mainColor;
+                border-radius: 20px;
+                padding: 10px 15px;
+                max-width: 270px;
+                width: 270px;
+                color: $mainColor;
+                font-weight: 500;
+                &::placeholder {
+                    font-family: $mainFont;
+                    color: $mainColor;
+                    font-weight: 500;
+                }
+            }
+        }
+        &-tarif {
+            font-family: $mainFont;
+            position: relative;
+            border-radius: 20px;
+            padding: 10px;
+            &-price {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 90px;
+                width: 100%;
+                &-content {
+                    font-family: $mainFont;
+                    color: $mainColor;
+                    font-size: 25px;
+                }
+            }
+            &-title {
+                font-size: 30px;
+                color: $mainColor;
+                text-align: center;
+                padding-bottom: 15px;
+                font-family: $mainFont;
+            }
+            &-list {
+                padding: 20px;
+                &-item {
+                    position: relative;
+                    padding-left: 20px;
+                    padding-top: 20px;
+                    color: $mainColor;
+                    &::before {
+                        content: '●';
+                        position: absolute;
+                        left: 0;
+                        font-size: 20px;
+                        top: 15px;
+                        color: $mainColor;
+                    }
+                }
+            }
+        }
+        &-down {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding-top: 30px;
+            border-top: 2px solid $mainColor;
+            width: 88%;
+            &-item {
+                font-family: $mainFont;
+                text-align: center;
+                min-height: 150px;
+                max-width: 350px;
+                &-title {
+                    font-size: 25px;
+                    color: $mainColor;
+                    padding-bottom: 10px;
+                }
+                &-desc {
+                    color: $mainColor;
+                    & span {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.modal-wrapper.active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #181818;
+    opacity: .4;
+}
+
+.modal-wrapper.active { 
+    opacity: 1;
+    display: flex;
+}

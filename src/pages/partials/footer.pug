@@ -1,19 +1,49 @@
 footer
     section.footer#footer
         .container
-            h1.footer-title Запишитесь на#[br]бесплатную консультацию
+            h1.footer-title Оставь свои данные и#[br]получи бесплатные уроки
             .footer-wrapper 
                 form.footer-wrapper-item.footer-forms(action="send.php")
                     input(type="text" placeholder="Как вас зовут?").footer-forms-form(name="name", required)
                     input(type="text" placeholder="Номер телефона").footer-forms-form(name="phone", required)#phone-footer
                     input(type="email" placeholder="Ваша почта").footer-forms-form(name="email", required)
-                    button.footer-forms-btn Перезвоните мне!
+                    button.footer-forms-btn Отправить
                 .footer-wrapper-item
-                   h2.footer-wrapper-item-title 1. Отправьте заявку
-                   p.footer-wrapper-item-desc Заполните форму, указав свои данные
-                   h2.footer-wrapper-item-title 2. Мы свяжемся с вами
-                   p.footer-wrapper-item-desc Ответим на все вопросы, проверим#[br]ваш уровень языка и проведём#[br]бесплатное пробное занятие
-                   h2.footer-wrapper-item-title 3. Увидимся на занятих!
+                   h2.footer-wrapper-item-title 1. Отправь заявку
+                   p.footer-wrapper-item-desc Заполни форму, указав свои данные
+                   h2.footer-wrapper-item-title 2. Я свяжусь с тобой
+                   p.footer-wrapper-item-desc Отвечу на все вопросы, проверю#[br]твой уровень иврита и подарю#[br]три бесплатных урока
+                   h2.footer-wrapper-item-title 3. Надеюсь увидеть тебя#[br]на своём курсе
     section.down-bar 
         .container 
             h1.down-bar-title © Иврит Кала. 2020-2021. Все права защищены
+    .modal-wrapper
+        .container 
+            .modal
+                svg(class="modal-close-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 490 490" style="enable-background:new 0 0 490 490;" xml:space="preserve")
+                    polygon(points="11.387,490 245,255.832 478.613,490 489.439,479.174 255.809,244.996 489.439,10.811 478.613,0 245,234.161 11.387,0 0.561,10.811 234.191,244.996 0.561,479.174 ")
+                h2.modal-content-tarif-title Стандартный
+                .modal-content-tarif-price 
+                    h2.modal-content-tarif-price-content 1379₪ (395$)
+                .modal-content-up
+                    .modal-content-tarif
+                        ul.modal-content-tarif-list 
+                            li.modal-content-tarif-list-item 90 видеуроков
+                            li.modal-content-tarif-list-item 10 уроков 1 на 1 с личным преподавателем
+                            li.modal-content-tarif-list-item Обратная связь в течение месяца
+                            li.modal-content-tarif-list-item Конспекты всех уроков с преподавателем
+                            li.modal-content-tarif-list-item Домашние задания
+                            li.modal-content-tarif-list-item Тест в конце курса
+                            li.modal-content-tarif-list-item Аттестат об окончании курса
+                    form.modal-content-forms(action="#")
+                        input.modal-content-forms-item(type="text", placeholder="Ваше имя и фамилия")
+                        input.modal-content-forms-item(type="text", placeholder="Ваш номер телефона")
+                        input.modal-content-forms-item(type="text", placeholder="Ваш email адрес")
+                        button.modal-content-forms-btn Отправить
+                .modal-content-down 
+                    .modal-content-down-item
+                        h3.modal-content-down-item-title Bit
+                        p.modal-content-down-item-desc Для граждан Израиля возможна оплата переводом через приложение Bit.#[br]Платёж высылается на номер #[span +972586887929]
+                    .modal-content-down-item
+                        h3.modal-content-down-item-title PayPal
+                        p.modal-content-down-item-desc Возможна оплата с помощью сервиса PayPal. Оплата производится с электронного кошелька либо по карте.#[br]Платёж высылается на email #[span ivrit.kala2020@gmail.com]
