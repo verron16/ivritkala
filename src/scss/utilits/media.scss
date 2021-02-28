@@ -574,6 +574,13 @@
             }
         }
     }
+    .tarif {
+        &-wrapper {
+            &-item {
+                min-height: 730px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 350px) {

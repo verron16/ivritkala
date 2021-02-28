@@ -23,8 +23,8 @@ function initPrice() {
 function initDateTitleTodo() {
     
     let allSiblings = event.target.parentNode.childNodes;
-    titleModal.textContent = allSiblings[0].textContent;
-    let oldList = allSiblings[1];
+    titleModal.textContent = allSiblings[1].textContent;
+    let oldList = allSiblings[2];
     tarifList.innerHTML = oldList.innerHTML;
     let deleteClassTarifList = document.querySelectorAll('.modal .tarif-list-item').forEach(todo => todo.classList.remove('tarif-list-item'))
     let addClassTarifList = document.querySelectorAll('.modal ul li').forEach(todo => todo.classList.add('modal-content-tarif-list-item'))
