@@ -1,4 +1,9 @@
 @media screen and (max-width: 1150px) {
+    .modal {
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 70vh;
+    }
     .tarif{
         &-list {
            
