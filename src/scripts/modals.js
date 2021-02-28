@@ -1,19 +1,42 @@
 const modalWindow = document.querySelector('.modal');
 const modalWrapper = document.querySelector('.modal-wrapper');
-const btnModalOpen = document.querySelector('.tarif-wrapper-item-btn');
+const btnModalOpen = document.querySelectorAll('.tarif-wrapper-item-btn');
 const btnModalClose = document.querySelector('.modal-close-icon');
+let priceModal = document.querySelector('.modal-content-tarif-price-content');
+let tarifList = document.querySelector('.modal-content-tarif-list');
+let titleModal = document.querySelector('.modal-content-tarif-title');
 
-btnModalOpen.addEventListener('click', openModal);
+btnModalOpen.forEach(btn => btn.addEventListener('click', event => {
+    event.preventDefault();
+    initPrice();
+    initDateTitleTodo();
+    openModal();;
+   
+}))
 btnModalClose.addEventListener('click', closeModal);
 
-function openModal(e) {
-    e.preventDefault();
+function initPrice() {
+    let prevSibl = event.target.previousSibling.childNodes[0].textContent;
+    priceModal.textContent = prevSibl;
+}
+
+function initDateTitleTodo() {
+    
+    let allSiblings = event.target.parentNode.childNodes;
+    titleModal.textContent = allSiblings[0].textContent;
+    let oldList = allSiblings[1];
+    tarifList.innerHTML = oldList.innerHTML;
+    let deleteClassTarifList = document.querySelectorAll('.modal .tarif-list-item').forEach(todo => todo.classList.remove('tarif-list-item'))
+    let addClassTarifList = document.querySelectorAll('.modal ul li').forEach(todo => todo.classList.add('modal-content-tarif-list-item'))
+}
+
+function openModal() {
     modalWindow.style.display = 'block';
     modalWrapper.classList.add('active');
     document.body.style.overflow = 'hidden';
     document.onclick = (e) => {
         if (e.target == modalWrapper || e.target == btnModalClose) {
-            closeModal()
+            closeModal();
         }
     }
 }
