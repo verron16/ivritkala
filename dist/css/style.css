@@ -1601,13 +1601,15 @@ th {
   border: solid 3px transparent;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1400px) {
   .modal {
     overflow-y: auto;
     overflow-x: hidden;
     height: 70vh;
   }
+}
 
+@media screen and (max-width: 1150px) {
   .tarif-list-item {
     padding-top: 15px;
     font-size: 18px;
